@@ -1,0 +1,33 @@
+{{ include('pages/inc/header.html.twig') }}
+    <div class="container">
+        <h1>View posts</h1>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for post in posts %}
+                <tr>
+                    <th>{{ post.id }}</th>
+                    <td>{{ post.title }}</td>
+                    <td>{{ post.description }}</td>
+                    <td>{{ post.category_id }}</td>
+                    <td>
+                        <a href="#" class="btn btn-primary btn-xs">View</a>
+                        <a href="#" class="btn btn-primary btn-xs">Edit</a>
+                        <a href="#" class="btn btn-danger btn-xs">View</a>
+                    </td>
+                </tr>
+                {% else %}
+                <tr><td>No record found!</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{{ include('pages/inc/footer.html.twig') }}
