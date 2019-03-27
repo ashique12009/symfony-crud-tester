@@ -38,9 +38,9 @@ class Post
     /**
      * @var integer
      *
-     * @ORM\Column(name="category_id", type="integer")
+     * @ORM\Column(name="categoryId", type="integer")
      */
-    private $category_id;
+    private $categoryId;
 
 
     /**
@@ -108,9 +108,9 @@ class Post
      *
      * @return Post
      */
-    public function setCategory_id($category_id)
+    public function setCategoryId($categoryId)
     {
-        $this->category_id = $category_id;
+        $this->categoryId = $categoryId;
 
         return $this;
     }
@@ -120,9 +120,9 @@ class Post
      *
      * @return string
      */
-    public function getCategory_id()
+    public function getCategoryId()
     {
-        return $this->category_id;
+        return $this->categoryId;
     }
 }
 
